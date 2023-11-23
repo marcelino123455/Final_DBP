@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.manga-background {
+    background-image: url('https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/aa2773f2157a29bad94125076515b507.jpe');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    position: relative; /* Añade position relative para que los elementos posicionados de manera absoluta respeten este contenedor */
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.manga-card-image img:hover {
+    transform: rotate(12deg);
+    transform: scale(1.5);
+}
+
+.manga-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Color blanco con una transparencia del 50% */
+    
+}
+.manga-title {
+    font-size: 36px;
+    font-family: cursive;
+    margin-top: 100px;
+}
+
+.manga-details {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.manga-cover {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+    margin: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: #0a4870;
+    transition: 0.3s;
+    border: 10px solid white; /* Agregamos un borde blanco con un grosor de 10px */
+}
+
+
+.manga-info {
+    text-align: left;
+    z-index: 1;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.advanced-button {
+    background-color: #0a4870;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agregar una transición para un efecto suave al pasar el ratón */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.advanced-button:hover {
+    background-color: #0c5ea1; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
+}
+.genre-buttons{
+    display: flex;
+}
+
+
+.manga-synopsis {
+    margin-top: 20px;margin-left: 20px;
+    margin-right: 20px;
+}
+
+.manga-author {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-top: 10px; /* Agrega un espacio superior */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.manga-author h1 {
+    font-size: 16px; /* Tamaño de fuente del título "Autor" */
+    margin-right: 10px; /* Espacio entre el título y el nombre del autor */
+    color: #0a4870; /* Color del título "Autor" */
+}
+
+.manga-author span {
+    font-weight: bold; /* Hace que el nombre del autor resalte más */
+    color: #333; /* Color del nombre del autor */
+}
+
+.manga-perfil-cards {
+    background-color: #d2cece;
+    padding-top: 20px;
+}
+
+.manga-card {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: row;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.manga-card-image {
+    width: 500px;
+    margin-right: 20px;
+}
+
+.manga-card-image img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del div */
+    height: 100%; /* La imagen ocupará el 100% del alto del div */
+}
+
+.manga-card-description {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.rating-summary {
+    /*  flex: 1;*/
+    text-align: right;
+    padding: 10px;
+    background-color: #01bcf2;
+}
+
+.average-rating {
+    font-size: 44px;
+    color: #ffcc00;
+    margin: 0;
+    font-family: open sans,sans-serif;
+    color: white;
+}
+
+.total-votes {
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: 9px;
+    margin-left: 9px;
+
+}
+
+.rating {
+    display: inline-block;
+    background-color: #534d4d;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    float: right;
+    padding: 0 0.1em;
+    cursor: pointer;
+}
+
+.rating label::before {
+    content: "\2605"; /* Código de estrella Unicode */
+    font-size: 2em;
+    color: #ccc;
+}
+
+.rating input:checked ~ label {
+    color: #ffcc00; /* Color de estrella seleccionada */
+}
+
+.rating label:hover::before {
+    color: #ffcc00; /* Cambia el color de la estrella al pasar el ratón */
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info, .social-links {
+    flex: 1;
+    margin: 0 10px;
+}
+
+
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
